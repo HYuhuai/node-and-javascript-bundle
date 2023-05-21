@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Func fun</title>
+
+        <script>
+            // You can also keep your functions at the top of the page for better readability
+            // Remember: need to define the function before you can call it
+
+            function hello(name = "Yuhuai") {   // default name is Yuhuai
+                return "Hello " + name + "!";
+            }
+
+            function printHello() {
+                document.write("Hello printer! <br>");   // generally not a good idea to write something within a function (why? for readability?)
+            }
+
+            function multiplier(a, b) {
+                return a * b;
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <br/>
+        <center>
+            <h1 id ="demo">Functions!!</h1>
+        </center>
+
+        <script>
+
+            // Functions
+            // Useful to make code look cleaner
+
+            document.write(hello() + "<br>");   // Default is Yuhuai
+            document.write(hello("porygon") + "<br>");
+
+            printHello();
+
+            var haha = multiplier(25,4)
+
+            document.write(haha + "<br>")
+            document.write(multiplier(25,3) + "<br>")
+
+            carName = "Volvo"
+
+            function printCar() {
+                return "The car is " + carName // functions can use variabls with global scope
+            }
+
+            document.write(printCar() + "<br>")
+
+            function modifyCar() {
+                carName = "Audi"    // functions can also modify variables with global scope
+            }
+
+            modifyCar()
+            document.write(printCar() + "<br>")
+
+
+
+
+
+
+        </script>
+
+
+
+    </body>
+</html>

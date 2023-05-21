@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Web  functions!!</title>
+        <script>
+
+            // Takes the user's input from id = "answer", checks if it matches the sum of the two
+            // randomly generated numbers, and let's the user know the result
+            function additionChecker() {
+                var ourAnswer = document.getElementById("answer").value;
+
+                if (isNaN(ourAnswer)){
+                    document.getElementById("output").innerHTML = "Hey! " + ourAnswer + " is not a number";
+                } else if((numOne + numTwo) == ourAnswer) {
+                    document.getElementById("output").innerHTML = "You have entered: " + ourAnswer + "<br>" + "Congrats, that's right!";
+                } else {
+                    document.getElementById("output").innerHTML = "You have entered: " + ourAnswer + "<br>" + "Nope, the correct answer is " + (numOne + numTwo);
+                }
+            }
+
+            function newCard() {
+                // remove everything in the output pane and input field first
+                document.getElementById("output").innerHTML = "";
+                document.getElementById("answer").value = "";
+                numOne = Math.floor(Math.random() * 10) + 1;
+                numTwo = Math.floor(Math.random() * 10) + 1;
+                document.getElementById("header").innerHTML = numOne + " + " + numTwo;
+            }
+
+
+        </script>
+    </head>
+    <body>
+
+
+        <center>
+            <h1 id ="header">
+                <script>
+                    var numOne = Math.floor(Math.random() * 10) + 1;
+                    var numTwo = Math.floor(Math.random() * 10) + 1;
+                    document.write(numOne, " + ", numTwo);
+                </script>
+            </h1>
+        </center>
+
+        <h1>Math flashcard</h1>
+
+        <!-- Gets input from user and activates additionChecker() upon submission -->
+        <p>Hello, please enter answer:</p>
+        <input id ="answer">
+        <br/><br/>
+        <button type = "button" onclick = "additionChecker()"> Submit</button>
+
+        <!-- Creates a page reload button -->
+        <br/><br/>
+        <input type = "button" value = "Get a New Card (HTML refresh)" onClick ="window.location.reload()">
+        <br/><br/>
+        <input type = "button" value = "Get a New Card (self-written function)" onClick ="newCard()">
+        <br/><br/>
+
+        <!-- This is where additionChecker() directs its output -->
+        <p id = "output"></p>
+        <br/><br/>
+
+    
+
+
+    </body>
+</html>

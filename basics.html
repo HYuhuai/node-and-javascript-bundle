@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!-- Comment in HTML VScode short: shift + Alt + A
+    The order where you put the JS is important.
+    Either the head, or the body.
+    Wherever in the body you put, it changes something on the screen
+    <script> Javascript goes in this tag </script>
+    
+    Can also use this syntax to access js code from another js file:
+    <script> src = another-js-file.js </script>
+
+    Usually put functions in the head. Want them to load in the memory before the body, so that the body can call these functions.
+
+    Use CTRL+` in VS code to open the terminal
+-->
+    <head>
+        <title>My Test Webpage</title>
+    </head>
+    <body>
+
+        <br/>
+        <center>
+            <h1 id ="demo">Hello world!</h1>
+        </center>
+    
+        <h2 id="whatever">Hello world!</h2>
+
+        <script>
+                
+                document.write("<br><br><h2>Variables and comparison operators</h2>");
+                
+                var firstName = "John";   // javascript variable is convention is camel case. Cannot do hyphens -. Underscore _ is accepted, but not conventional
+                var firstName = "Tim";    // variables are also variable in that you can change the assignment
+
+                // Javascript does not care about declaring int vs float, it will figure things out on its own
+                num_1 = 10.23
+                num_2 = 11
+
+                document.write(2 ** 3); // 8
+
+                document.write('<br>');
+
+                document.write(10 % 2); // remainder is 0
+
+                document.write('<br>');
+
+                num_1++     // num_1 = num_1 + 1
+                num_1--     // num_1 = num_1 - 1
+
+                /* This js changes whatever the inner stuff the "demo" is into "I like cheese!" */
+                // This is a comment too
+                document.getElementById("demo").innerHTML = 'I like cheese!';
+                document.write('I REALLY like cheese!');
+
+                document.getElementById("whatever").innerHTML = num_1 + num_2;
+
+                num_1 += 5  // 10.23 + 5
+
+                document.write(num_1); 
+
+                document.write('<br>');
+
+                document.write("num_1 > num_2: " + (num_1 > num_2)); // true. Comparison operators
+
+                document.write('<br>');
+
+                document.write(num_1 == num_2); // false 
+
+                document.write('<br>');
+
+                document.write(num_1 != num_2); // true 
+
+                document.write('<br>');
+
+                // Conditionals
+
+                document.write("<br><br><h2>Conditionals</h2>");
+
+                firstName = "Yuhuai"
+                if (firstName == "John"){
+                    document.write(firstName)
+                } else {
+                    document.write("NO JOHN")
+                }
+
+                document.write('<br>');
+
+                var lastName = "matrix"
+
+                if (lastName == "hello") {
+                    document.write("Hello hello")
+                } else if (lastName == "matrix"){
+                    document.write("The matrix has you")
+                }
+
+                document.write('<br>');
+
+                
+                // Logic operators
+                // && and
+                // || or
+                // ! not
+
+                document.write("<br><br><h2>Logic operators</h2>");
+                
+                if (firstName == "Yuhuai" && lastName == "matrix" && 4 == 4){
+                    document.write("Yuhuai has entered the matrix")
+                }
+                
+                document.write('<br>');
+                
+                // For loops
+
+                document.write("<br><br><h2>For loop</h2>");
+
+                for (i = 0; i < 10; i++){
+                    document.write("Hello world "+ i + "<br>");
+                }
+
+                // While loop
+
+                document.write("<br><br><h2>While loop</h2>");
+
+                var j = 0;
+
+                while (j < 10) {
+                    document.write(j + " Whillo world" + '<br>');
+                    j++;
+                }
+
+                // Arrays
+
+                document.write("<br><br><h2>Arrays</h2>");
+                
+                var pizzaToppings = []  // Declares an array
+                var pokemon = ["Charmander", "Bulbasaur", "Squirtle", 151]  // Also declares an array
+
+                document.write(pokemon)
+                document.write('<br>');
+                document.write(pokemon[0]);  // Charmander
+                document.write('<br>');
+
+                for(i = 0; i < pokemon.length; i++){
+                    document.write("Pokemon " + (i + 1) + ": " + pokemon[i] + '<br>');
+                }
+
+                // Multi-dimensional arrays
+                // These are arrays of arrays
+
+                document.write("<br><br><h2>Multi-dimensional Arrays</h2>");
+
+                var hoennmon  = ["Zigzagoon", "Groudon"]
+                pokemon = ["Charmander", "Bulbasaur", "Squirtle", ["Cyndaquil", "Chikorita", "Totodile"], hoennmon]
+                document.write(pokemon[3][0] + "<br>");  // Cyndaquil
+                document.write(pokemon[4][1] + "<br>");  // Groudon
+                document.write(pokemon[pokemon.length - 1] + "<br>");    // hoennmon
+
+
+
+                // Objects
+                // An array is just a list of singular things. Objects in java are similar to dictionaries in Python or hash in Ruby,
+                // though not quite the same
+                // Not to be confused with object-oriented programming.
+
+
+
+                document.write("<br><br><h2>Objects</h2>");
+
+                var person = {
+                    firstName: "John",      // name-value pair
+                    lastName: "Cyber",
+                    pokemon: "Porygon2",
+                    numPokemon: 151
+                }
+
+                document.write("Person's pokemon is: " + person.pokemon + "<br>");
+                document.write("Person has " + (person.numPokemon + 1) + " pokemon.<br>")
+
+                
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+                document.write('<br>');
+
+
+                {
+                    // This is a block of code, all executes at the same time
+                    2 + 2;
+                    4 + 3;
+
+
+                }
+
+        </script>
+
+
+
+        <button type = "button" onclick = "document.write('I like cheese!')">CLICK ME</button>
+
+
+    </body>
+</html>

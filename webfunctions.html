@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Web  functions!!</title>
+        <script>
+            function hello() {
+                var firstName = document.getElementById("yourName").value;
+                document.getElementById("output").innerHTML = firstName;
+            }
+
+        </script>
+    </head>
+    <body>
+
+        
+        <center>
+            <h1 id ="demo">Web Functions!!</h1>
+        </center>
+
+        <!-- Working with forms -->
+        <h1>Working with forms</h1>
+        <input id ="yourName">
+        <button type = "button" onclick = "hello()"> Submit</button>
+        <br/><br/>
+        <p id = "output"></p>
+        <br/><br/>
+
+        <script>
+            // Prompt boxes
+            document.write("<br><br><h2>Prompt boxes</h2>");
+
+            var userName = prompt("Hello there, please enter your name");
+            document.write(hello(yourName) + "<br>");
+
+            
+            // Random numbers
+            document.write("<br><br><h2>Random numbers</h2>");
+
+            document.write(Math.random() + "<br>"); // has no floor, will likely generate a long decimal
+
+            document.write(Math.floor(Math.random() * 10) + "<br>"); // random number between 0 and 9
+
+            document.write((Math.floor(Math.random() * 10) + 1) + "<br>");  // random number between 1 and 10
+
+            
+
+        </script>
+
+    
+
+
+    </body>
+</html>
